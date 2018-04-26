@@ -13,4 +13,11 @@ describe 'BankAccount' do
       expect(subject.show_balance).to eq 100
     end
   end
+  describe '#withdraw' do
+    it 'lets you make a withdrawal' do
+      subject.deposit(100)
+      subject.withdraw(20)
+      expect(subject.show_balance).to eq 80
+    end
+  end
 end

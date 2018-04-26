@@ -15,4 +15,9 @@ class BankAccount
     @balance += amount
     @transaction = { date: date, credit: amount, debit: '', balance: @balance }
   end
+
+  def withdraw(date = Date.new, amount)
+    @balance -= amount
+    @transaction = { date: date, credit: '', debit: amount, balance: @balance }
+  end
 end
