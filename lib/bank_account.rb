@@ -1,3 +1,5 @@
+require 'date'
+
 class BankAccount
   attr_reader :date, :balance, :transaction, :history
   def initialize(balance = 0)
@@ -7,5 +9,10 @@ class BankAccount
 
   def show_balance
     @balance
+  end
+
+  def deposit(date = Date.new, amount)
+    @balance += amount
+    @transaction = { date: date, credit: amount, debit: '', balance: @balance }
   end
 end
