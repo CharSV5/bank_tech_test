@@ -2,7 +2,7 @@ require 'date'
 require_relative 'history'
 
 class BankAccount
-  attr_reader :current_date, :date, :transaction, :balance, :all_transactions
+  attr_reader :current_date, :date, :transaction, :balance, :all_transactions, :history
   def initialize(balance = 0)
     @current_date = Time.now.strftime("%m/%d/%Y")
     @transaction = { date: date, credit: '', debit: '', balance: balance }

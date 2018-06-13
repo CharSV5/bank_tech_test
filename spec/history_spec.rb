@@ -1,7 +1,6 @@
 require 'history'
 
 describe 'History' do
-  subject {History.new}
   describe 'log' do
     it 'returns all previous transactions' do
       all_transactions = [{:date=>"04/26/2018", :credit=>100, :debit=>"", :balance=>100},
